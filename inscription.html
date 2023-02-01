@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,19 +27,43 @@
 <section>
     <h1>Inscription</h1>
     <form>
-        <label for="name">First Name*</label>
-             <input type="text" name="name" id="name" required minlength="3" />
-        <br> <label for="lastname">Last Name</label>
-        <input type="text" name="lastname" id="lastname" minlength="3" />
-        <br> <label for="address">Address</label>
-        <textarea name="address" id="address" cols="30" rows="5"></textarea>
-
+        <table>
+            <tr>
+        <td><label for="name">First Name*</label></td>
+                <td><input type="text" name="name" id="name" required minlength="3" title="enter name" placeholder="John" /></td>
+            </tr>
+            <tr>
+                <td><br> <label for="lastname">Last Name</label></td>
+                <td><input type="text" name="lastname" id="lastname" minlength="3" placeholder="wick" title="enter last name" /></td>
+            </tr>
+            <tr>
+                <td><br> <label for="address">Address</label></td>
+                <td><textarea name="address" id="address" cols="30" rows="5" title="enter your address"></textarea></td>
+            </tr>
+            <tr>
+                <td><br> <label for="phone">PhoneNumber* </label></td>
+                <td><input type="number" name="phone" id="phone" required pattern="[0-9]" title="Enter phone number" placeholder="+21625252525" /></td>
+            </tr>
+            <tr>
+                <td><br><label for="date">Date of birth </label></td>
+                <td><input type="date" name="date" id="date" placeholder="mm/dd/yyyy" title="enter your birth date"/></td>
+            </tr>
+            <tr>
+                <td><br><label for="password">password*</label></td>
+                <td><input type="password" name="password" id="password" required placeholder="******" pattern="[^a-fA-f0-9]" title="enter password" /></td>
+            </tr>
+            <tr>
+                <td><br><label for="confirmPassword">Confirm Password</label></td>
+                <td><input type="password" name="confirmPassword" id="confirmPassword" required placeholder="******" title="passwords must be identical" /></td>
+            </tr>
+        </table>
 
     </form>
 </section>
 <footer>
-    <h3>Contact Us </h3>
+    <hr><h3>Contact Us </h3>
     <a href="mailto:esprit@esprit.tn"> esprit@esprit.tn</a>
+    <p align=right>NoWhere Street</p>
 
 </footer>
 </body>
